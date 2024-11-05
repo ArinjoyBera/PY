@@ -1,0 +1,20 @@
+def dive(div, dis):
+    if (div<0)^(dis<0):
+        sign = -1
+    else:
+        sign = 1
+    div=abs(div)
+    dis=abs(dis)
+    q = 0
+    t = 0
+    for i in range(31, -1, -1):
+        if (t+(dis<<i)<=div):
+            t += div<<i
+            q += 1<<i
+    if sign == -1:
+        q = -q
+    print(q)
+
+div = int(input("Enter the dividend"))
+dis = int(input("Enter the divisor"))
+dive(div, dis)
