@@ -2,9 +2,9 @@ def nnrjr(number):
     count = 0
     if ((number & (~(number-1))) == number):
         while (number > 1):
-            number>>=2
-            count += 2
-        if count%2 == 0:
+            number>>=1
+            count += 1
+        if count%3 == 0:
             return True
         else:
             return False
